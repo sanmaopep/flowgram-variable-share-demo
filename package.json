@@ -15,6 +15,7 @@
     "tsconfig.json"
   ],
   "dependencies": {
+    "@flowgram.ai/form-materials": "^0.2.28",
     "@flowgram.ai/free-layout-editor": "0.2.28",
     "@flowgram.ai/free-snap-plugin": "0.2.28",
     "@flowgram.ai/minimap-plugin": "0.2.28",
