@@ -51,7 +51,7 @@ export const initialData: WorkflowJSON = {
     },
     {
       id: '144150',
-      type: 'node1',
+      type: 'a',
       meta: {
         position: {
           x: 950,
@@ -59,13 +59,13 @@ export const initialData: WorkflowJSON = {
         },
       },
       data: {
-        title: 'New Node1',
+        title: 'A',
         content: 'xxxx',
       },
     },
     {
       id: '118937',
-      type: 'node2',
+      type: 'b',
       meta: {
         position: {
           x: 950,
@@ -73,7 +73,7 @@ export const initialData: WorkflowJSON = {
         },
       },
       data: {
-        title: 'New Node2',
+        title: 'B',
         content: 'xxxx',
       },
     },

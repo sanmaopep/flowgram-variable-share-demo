@@ -9,6 +9,8 @@ import { StartNodeRegistry } from './start';
 import { EndNodeRegistry } from './end';
 import { CustomNodeRegistry } from './custom';
 import { ConditionNodeRegistry } from './condition';
+import { BNodeRegistry } from './b';
+import { ANodeRegistry } from './a';
 
 /**
  * You can customize your own node registry
@@ -19,4 +21,6 @@ export const nodeRegistries: WorkflowNodeRegistry[] = [
   ConditionNodeRegistry,
   EndNodeRegistry,
   CustomNodeRegistry,
+  ANodeRegistry,
+  BNodeRegistry,
 ];
