@@ -11,11 +11,10 @@ import {
   FreeLayoutProps,
   WorkflowNodeProps,
   WorkflowNodeRenderer,
-  Field,
   useNodeRender,
 } from '@flowgram.ai/free-layout-editor';
 
-import { nodeRegistries } from '../node-registries';
+import { nodeRegistries } from '../nodes';
 import { initialData } from '../initial-data';
 
 export const useEditorProps = () =>
@@ -67,23 +66,6 @@ export const useEditorProps = () =>
           meta: {
             defaultExpanded: true,
           },
-          formMeta: {
-            /**
-             * Render form
-             */
-            render: () => (
-              <>
-                <Field<string> name="title">
-                  {({ field }) => <div className="demo-free-node-title">{field.value}</div>}
-                </Field>
-                <div className="demo-free-node-content">
-                  <Field<string> name="content">
-                    <input />
-                  </Field>
-                </div>
-              </>
-            ),
-          },
         };
       },
       materials: {
@@ -91,24 +73,10 @@ export const useEditorProps = () =>
          * Render Node
          */
         renderDefaultNode: (props: WorkflowNodeProps) => {
-          const { form, node } = useNodeRender();
+          const { form } = useNodeRender();
           return (
             <WorkflowNodeRenderer className="demo-free-node" node={props.node}>
               {form?.render()}
-              {node.flowNodeType === 'condition' && (
-                <div
-                  data-port-id="if"
-                  data-port-type="output"
-                  style={{ position: 'absolute', right: 0, top: '33%' }}
-                />
-              )}
-              {node.flowNodeType === 'condition' && (
-                <div
-                  data-port-id="else"
-                  data-port-type="output"
-                  style={{ position: 'absolute', right: 0, top: '66%' }}
-                />
-              )}
             </WorkflowNodeRenderer>
           );
         },
@@ -135,7 +103,7 @@ export const useEditorProps = () =>
       /**
        * Playground init
        */
-      onInit: (ctx) => {},
+      onInit: (ctx) => { },
       /**
        * Playground render
        */
